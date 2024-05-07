@@ -1,0 +1,38 @@
+{
+  "name": "sillytavern-extraslite",
+  "version": "1.0.0",
+  "description": "Node.js re-implementation of ST Extras.",
+  "main": "index.mjs",
+  "scripts": {
+    "start": "node index.mjs",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cohee1207/SillyTavern-ExtrasLite.git"
+  },
+  "author": "Cohee1207",
+  "license": "AGPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/Cohee1207/SillyTavern-ExtrasLite/issues"
+  },
+  "homepage": "https://github.com/Cohee1207/SillyTavern-ExtrasLite#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "chalk": "^5.3.0",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "localtunnel": "^2.0.2",
+    "lodash": "^4.17.21",
+    "multer": "^1.4.5-lts.1",
+    "nodejs-whisper": "^0.1.13",
+    "openai": "^4.42.0",
+    "yaml": "^2.4.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.2.0",
+    "eslint": "^9.2.0",
+    "globals": "^15.1.0"
+  }
+}

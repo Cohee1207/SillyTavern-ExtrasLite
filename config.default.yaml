@@ -1,0 +1,19 @@
+# Should the server be listening on all interfaces?
+listen: false
+# Port on which the server should listen.
+port: 5100
+# Should create a public LocalTunnel URL?
+share: false
+# API key. If not empty - it will be required for all requests.
+apiKey: ''
+# Set your OpenAI API key and compatible endpoint URL here.
+# Specify a model you want to use for image generation.
+openAI:
+  apiKey: sk-YOUR_API_KEY
+  apiEndpoint: https://api.openai.com/v1
+  imageGenerationModel: dall-e-3
+  imageEnforceSize: true
+# Model used for Whisper STT. It will be automatically downloaded.
+# See the list here: https://github.com/ChetanXpro/nodejs-whisper?tab=readme-ov-file#usageexamples
+whisper:
+  model: base.en
