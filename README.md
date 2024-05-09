@@ -54,3 +54,7 @@ See `config.default.yaml` for possible configurations. Modify the copy at `confi
 * `listen`/`port`/`share` - networking configs.
 * `openAI` - plug API key / URL here and choose models to use.
 * `prompts` - configure prompts used for module tasks.
+
+## License
+
+AGPLv3
