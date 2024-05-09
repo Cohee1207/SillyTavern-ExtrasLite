@@ -49,7 +49,7 @@ Then plug the URL into SillyTavern Extras API URL.
 
 ## Configurations
 
-See `config.default.yaml` for possible configurations. Modify the copy at `config.yaml` to apply them.
+See [config.default.yaml](https://github.com/Cohee1207/SillyTavern-ExtrasLite/blob/main/config.default.yaml) for possible configurations. Modify the copy at `config.yaml` to apply them.
 
 * `listen`/`port`/`share` - networking configs.
 * `openAI` - plug API key / URL here and choose models to use.
