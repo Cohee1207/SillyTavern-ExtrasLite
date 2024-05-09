@@ -4,16 +4,67 @@ listen: false
 port: 5100
 # Should create a public LocalTunnel URL?
 share: false
-# API key. If not empty - it will be required for all requests.
-apiKey: ''
+# Extras API key. If not empty - it will be required for all requests.
+apiKey: ""
+# A list of modules that you don't want to use
+disabledModules: []
 # Set your OpenAI API key and compatible endpoint URL here.
-# Specify a model you want to use for image generation.
+# Specify a model you want to use for image generation and other modules.
 openAI:
+  # Your API key / password
   apiKey: sk-YOUR_API_KEY
+  # OAI API endpoint
   apiEndpoint: https://api.openai.com/v1
+  # Model used for image generation requests
   imageGenerationModel: dall-e-3
+  # Constraints image sizes to only supported by DALL-E. Disable to allow arbitrary sizes.
   imageEnforceSize: true
-# Model used for Whisper STT. It will be automatically downloaded.
+  # Model used for text summarization requests
+  summarizationModel: gpt-4-turbo
+  # Model used for text classification requests
+  classificationModel: gpt-4-turbo
+  # Model used for image captioning requests
+  captioningModel: gpt-4-turbo
+# Model used for Whisper STT. It will be automatically downloaded and compiled.
 # See the list here: https://github.com/ChetanXpro/nodejs-whisper?tab=readme-ov-file#usageexamples
 whisper:
   model: base.en
+# Prompts used for different NLP tasks.
+prompts:
+  labels:
+    [
+      admiration,
+      amusement,
+      anger,
+      annoyance,
+      approval,
+      caring,
+      confusion,
+      curiosity,
+      desire,
+      disappointment,
+      disapproval,
+      disgust,
+      embarrassment,
+      excitement,
+      fear,
+      gratitude,
+      grief,
+      joy,
+      love,
+      nervousness,
+      optimism,
+      pride,
+      realization,
+      relief,
+      remorse,
+      sadness,
+      surprise,
+      neutral,
+    ]
+  # Classification prompt
+  classification: "Classify the emotion of the following message. Output just one word, e.g. 'joy' or 'anger'. Choose only one of the following labels:"
+  # Summarization prompt
+  summarization: "Summarize the most important facts and events in the story so far. Limit the summary to 500 words or less. Your response should include nothing but the summary."
+  # Captioning prompt
+  captioning: "Provide an accurate and detailed description of the image."
