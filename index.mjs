@@ -37,6 +37,7 @@ const MODULES = [
     'classify',
     'summarize',
     'caption',
+    'embeddings',
 ];
 
 app.use(cors());
@@ -306,6 +307,45 @@ if (isModuleEnabled('classify')) {
             return res.sendStatus(500);
         } catch (error) {
             console.error('Classification failed:', error);
+            return res.sendStatus(500);
+        }
+    });
+}
+
+if (isModuleEnabled('embeddings')) {
+    app.post('/api/embeddings/compute', async (req, res) => {
+        try {
+            const embeddingModel = config.openAI?.embeddingModel ?? 'text-embedding-3-small';
+            const text = req.body.text;
+
+            if (!text) {
+                console.error('No text provided');
+                return res.sendStatus(400);
+            }
+
+            console.log('Computing embeddings for:', text);
+
+            const openai = new OpenAI({
+                apiKey: openAIApiKey,
+                baseURL: openAIBaseUrl,
+            });
+
+            const result = await openai.embeddings.create({
+                model: embeddingModel,
+                input: text,
+            });
+
+            if (!result.data.length) {
+                console.log('No embeddings data found', result);
+                return res.sendStatus(500);
+            }
+
+            console.log('Embeddings result:', result.data);
+            const embedding = typeof text === 'string' ? result.data[0].embedding : result.data.map(d => d.embedding);
+
+            return res.json({ embedding });
+        } catch (error) {
+            console.error('Embeddings failed:', error);
             return res.sendStatus(500);
         }
     });

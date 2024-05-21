@@ -25,6 +25,8 @@ openAI:
   classificationModel: gpt-4-turbo
   # Model used for image captioning requests
   captioningModel: gpt-4-turbo
+  # Model used for text embedding requests
+  embeddingModel: text-embedding-3-small
 # Model used for Whisper STT. It will be automatically downloaded and compiled.
 # See the list here: https://github.com/ChetanXpro/nodejs-whisper?tab=readme-ov-file#usageexamples
 whisper:

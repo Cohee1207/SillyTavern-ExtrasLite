@@ -11,6 +11,7 @@ This was not tested on Termux and is unlikely to work there. I won't provide any
 * `summarize` - wrapper for OpenAI-compatible endpoint for text summarization.
 * `classify` - wrapper for OpenAI-compatible endpoint for text classification.
 * `caption` - wrapper for OpenAI-compatible multimodal image captioning.
+* `embeddings` - wrapper for OpenAI-compatible text embeddings computation.
 
 ```txt
 >AI revolution
