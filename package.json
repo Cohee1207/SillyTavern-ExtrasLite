@@ -37,7 +37,7 @@
   },
   "overrides": {
     "localtunnel": {
-        "axios": "^0.28.0"
+        "axios": "^1.8.3"
     }
   }
 }
