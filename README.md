@@ -42,6 +42,7 @@ disabledModules: ['sd', 'summarize'] # etc...
 
 ```bash
 git clone https://github.com/Cohee1207/SillyTavern-ExtrasLite
+cd SillyTavern-ExtrasLite
 npm install
 npm run start
 ```
