@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/Cohee1207/SillyTavern-ExtrasLite#readme",
   "dependencies": {
-    "body-parser": "^1.20.2",
+    "body-parser": "^1.20.3",
     "chalk": "^5.3.0",
     "cors": "^2.8.5",
     "express": "^4.21.2",
