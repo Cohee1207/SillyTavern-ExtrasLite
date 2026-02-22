@@ -26,13 +26,13 @@
     "localtunnel": "^2.0.2",
     "lodash": "^4.17.23",
     "multer": "^2.0.2",
-    "nodejs-whisper": "^0.1.13",
+    "nodejs-whisper": "^0.2.9",
     "openai": "^4.42.0",
     "yaml": "^2.4.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.2.0",
-    "eslint": "^9.2.0",
+    "eslint": "^10.0.1",
     "globals": "^15.1.0"
   },
   "overrides": {
