@@ -28,7 +28,7 @@
     "multer": "^2.1.1",
     "nodejs-whisper": "^0.2.9",
     "openai": "^4.42.0",
-    "yaml": "^2.4.2"
+    "yaml": "^2.8.3"
   },
   "devDependencies": {
     "@eslint/js": "^9.2.0",
